@@ -1,5 +1,5 @@
 ---
-title: very long long long long large big title
+title: very long long long long large big title, should not break into to two lines of title. Titles are imprtant, very important. 
 ---
 
 <!-- My First Post On Jekyll -->
