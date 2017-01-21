@@ -1,6 +1,12 @@
-## My First Post On Jekyll
+---
+title: very long long long long large big title
+---
+
+<!-- My First Post On Jekyll -->
 
 Hi, `Hello World.`
+
+Some large big paragraph which is not perfect. Some large big paragraph which is not perfect. Some large big paragraph which is not perfect. Some large big paragraph which is not perfect. Some large big paragraph which is not perfect. Some large big paragraph which is not perfect. Some large big paragraph which is not perfect.    
 
 ```ruby
 class FirstClass
