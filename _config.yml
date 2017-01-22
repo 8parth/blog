@@ -7,13 +7,13 @@
 
 # Site Settings
 locale                   : "en"
-title                    : "ParthTalks"
+title                    : "Parth Modi"
 title_separator          : "-"
 name                     : "Parth Modi"
 description              : ""
-url                      : "https://8parth.github.io"
+url                      : "https://parthrmodi.com"
 baseurl                  : "/blog"
-repository               : "8parth/minimal-mistakes"
+repository               : "8parth/blog"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
@@ -79,7 +79,7 @@ analytics:
 author:
   name             : "Parth Modi"
   avatar           : "/assets/images/bio-photo.jpg"
-  bio              : "Ruby on Rails developer, loves to talk about technology."
+  bio              : "Software Engieer - Ruby on Rails Developer."
   location         : "Ahmedabad, India"
   email            : "parthmodi54@yahoo.com"
   uri              : 
@@ -148,7 +148,7 @@ markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 markdown: kramdown
 highlighter: rouge
 lsi: false
-excerpt_separator: "\n\n"
+excerpt_separator: <!--more-->
 incremental: false
 
 
@@ -182,6 +182,7 @@ gems:
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-gist
+  - jekyll-twitter-plugin
   - jekyll-feed
   - jemoji
 
@@ -211,16 +212,16 @@ tag_archive:
   type: liquid
   path: /tags/
 # https://github.com/jekyll/jekyll-archives
-# jekyll-archives:
-#   enabled:
-#     - categories
-#     - tags
-#   layouts:
-#     category: archive-taxonomy
-#     tag: archive-taxonomy
-#   permalinks:
-#     category: /categories/:name/
-#     tag: /tags/:name/
+jekyll-archives:
+  enabled:
+    - categories
+    - tags
+  layouts:
+    category: archive-taxonomy
+    tag: archive-taxonomy
+  permalinks:
+    category: /categories/:name/
+    tag: /tags/:name/
 
 
 # HTML Compression
