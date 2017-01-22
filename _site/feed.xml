@@ -1,17 +1,14 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://localhost:4000/blog/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.3.1">Jekyll</generator><link href="http://localhost:4000/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/blog/" rel="alternate" type="text/html" /><updated>2017-01-22T23:27:51+05:30</updated><id>http://localhost:4000/blog//</id><title type="html">Parth Modi</title><subtitle></subtitle><author><name>Parth Modi</name><email>parthmodi54@yahoo.com</email></author><entry><title type="html">Hello Jekyll!</title><link href="http://localhost:4000/blog/my-first-jekyll-post/" rel="alternate" type="text/html" title="Hello Jekyll!" /><published>2017-01-12T00:00:00+05:30</published><updated>2017-01-12T00:00:00+05:30</updated><id>http://localhost:4000/blog/my-first-jekyll-post</id><content type="html" xml:base="http://localhost:4000/blog/my-first-jekyll-post/">&lt;!-- My First Post On Jekyll --&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://localhost:4000/blog/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.3.1">Jekyll</generator><link href="http://localhost:4000/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/blog/" rel="alternate" type="text/html" /><updated>2017-01-22T23:56:32+05:30</updated><id>http://localhost:4000/blog//</id><title type="html">Parth Modi</title><subtitle></subtitle><author><name>Parth Modi</name><email>parthmodi54@yahoo.com</email></author><entry><title type="html">Hello Jekyll!</title><link href="http://localhost:4000/blog/my-first-jekyll-post/" rel="alternate" type="text/html" title="Hello Jekyll!" /><published>2017-01-12T00:00:00+05:30</published><updated>2017-01-12T00:00:00+05:30</updated><id>http://localhost:4000/blog/my-first-jekyll-post</id><content type="html" xml:base="http://localhost:4000/blog/my-first-jekyll-post/">&lt;!-- My First Post On Jekyll --&gt;
 
 &lt;p&gt;Hi, &lt;code class=&quot;highlighter-rouge&quot;&gt;Hello World.&lt;/code&gt;&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-3
-4
-5&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;FirstClass&lt;/span&gt;
+&lt;p&gt;Some large big paragraph which is not perfect. Some large big paragraph which is not perfect. Some large big paragraph which is not perfect. Some large big paragraph which is not perfect. Some large big paragraph which is not perfect. Some large big paragraph which is not perfect. Some large big paragraph which is not perfect.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;FirstClass&lt;/span&gt;
   &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;method&lt;/span&gt;
     &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;
   &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;blockquote class=&quot;twitter-tweet&quot; data-lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;Do the Right Thing and Document Your Rails API with Swagger &lt;a href=&quot;https://t.co/tiw1FAQbWL&quot;&gt;https://t.co/tiw1FAQbWL&lt;/a&gt; via &lt;a href=&quot;https://twitter.com/sitepointdotcom&quot;&gt;@sitepointdotcom&lt;/a&gt; by &lt;a href=&quot;https://twitter.com/ParthModi08&quot;&gt;@ParthModi08&lt;/a&gt;  &lt;a href=&quot;https://twitter.com/hashtag/ParthTalks?src=hash&quot;&gt;#ParthTalks&lt;/a&gt;&lt;/p&gt;&amp;mdash; Parth Modi (@ParthModi08) &lt;a href=&quot;https://twitter.com/ParthModi08/status/818493772392792067&quot;&gt;January 9, 2017&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async=&quot;&quot; src=&quot;//platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
@@ -49,15 +46,12 @@
 end&lt;/pre&gt;&lt;/noscript&gt;
 &lt;script src=&quot;https://gist.github.com/8parth/f3a4dce410f12139b33feef008878512.js&quot;&gt; &lt;/script&gt;</content><author><name>Parth Modi</name><email>parthmodi54@yahoo.com</email></author><summary type="html">Hi, Hello World.
 
-1
-2
-3
-4
-5class FirstClass
+Some large big paragraph which is not perfect. Some large big paragraph which is not perfect. Some large big paragraph which is not perfect. Some large big paragraph which is not perfect. Some large big paragraph which is not perfect. Some large big paragraph which is not perfect. Some large big paragraph which is not perfect.
+
+class FirstClass
   def method
     x
   end
 end
-
 
 Do the Right Thing and Document Your Rails API with Swagger https://t.co/tiw1FAQbWL via @sitepointdotcom by @ParthModi08  #ParthTalks&amp;mdash; Parth Modi (@ParthModi08) January 9, 2017</summary></entry></feed>
