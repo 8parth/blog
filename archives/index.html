@@ -1,0 +1,16 @@
+---
+layout: archive
+permalink: /archives/
+title: "Posts by Year"
+author_profile: true
+---
+
+{% include group-by-array collection=site.posts field="archives" %}
+
+{% for archive in archives %}
+  {% assign posts = archives[forloop.index0] %}
+  <h2 id="{{ archive | slugify }}" class="archive__subtitle">{{ archive }}</h2>
+  {% for post in posts %}
+    {% include year-archive.html %}
+  {% endfor %}
+{% endfor %}
