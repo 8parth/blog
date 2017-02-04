@@ -1,5 +1,10 @@
 ---
 title: Hello Jekyll!
+categories: Jekyll
+header:
+  teaser: /assets/images/teaser-image.jpg
+teaser: /assets/images/teaser-image.jpg
+tags: [jekyll, tags]
 ---
 
 <!-- My First Post On Jekyll -->

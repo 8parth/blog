@@ -11,6 +11,8 @@ author_profile: true
   {% assign posts = archives[forloop.index0] %}
   <h2 id="{{ archive | slugify }}" class="archive__subtitle">{{ archive }}</h2>
   {% for post in posts %}
-    {% include year-archive.html %}
+  	{% unless post.tags contains 'draft' %}
+    	{% include year-archive.html %}
+    {% endunless %}
   {% endfor %}
 {% endfor %}
