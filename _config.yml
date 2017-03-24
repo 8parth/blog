@@ -37,5 +37,6 @@ gems:
   - jekyll-paginate
   - jekyll-feed
 
+
 # Custom vars
 version:             1.0.0
