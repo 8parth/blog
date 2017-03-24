@@ -1,0 +1,41 @@
+# Permalinks
+#
+# Use of `relative_permalinks` ensures post links from the index work properly.
+permalink:           pretty
+
+# Setup
+title:               Parth Modi
+tagline:             'Software Engineer'
+description:         'Loves to develop web with Ruby on Rails. Shares his journey of learning at his blog.'
+url:                 "http://parthrmodi.com"
+baseurl:             "/blog"
+paginate:            5
+excerpt_separator:   <!--more-->
+
+# About/contact
+author:
+  name:              Parth Modi
+  url:               https://twitter.com/8parth
+  email:             "parthmodi54@yahoo.com"
+  avatar           : "public/assets/bio-photo.jpg"
+  bio              : "Software Engieer - Ruby on Rails Developer."
+  location         : "Ahmedabad, India"
+  email            : "parthmodi54@yahoo.com"
+  codepen          : #"parthmodi"
+  facebook         : "parth.modi.359"
+  github           : "8parth"
+  google_plus      : "115885247380801217391"
+  linkedin         : "parthrmodi"
+  stackoverflow    : "4933185/parth-modi"
+  twitter          : "ParthModi08"
+
+feed:
+  path: atom.xml
+
+# gems
+gems:
+  - jekyll-paginate
+  - jekyll-feed
+
+# Custom vars
+version:             1.0.0
