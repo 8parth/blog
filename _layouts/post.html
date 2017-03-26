@@ -7,20 +7,20 @@ layout: default
   <span class="post-date">{{ page.date | date_to_string }}</span>
   {{ content }}
 </div>
-
+{% if page.tags.size > 0 %}
 <div class="tagcloud related">
   <h2>Tags:</h2>
   <ul>
-    {% for tag in site.tags %}
+    {% for tag in page.tags %}
     <li>
-      <a href="{{ tag | first }}">
-        {{ tag | first }}
+      <a href="{{ site.baseurl }}/tag/{{ tag }}">
+        {{ tag  }}
       </a>
     </li>
     {% endfor %}
   </ul>
 </div>
-
+{% endif %}
 <div class="related">
   <h2>Related Posts</h2>
   <ul class="related-posts">
