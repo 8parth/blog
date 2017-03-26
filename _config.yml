@@ -35,10 +35,10 @@ feed:
 jekyll-archives:
   enabled:
     # - day
-    # - categories
+    - categories
     - tags
   layouts:
-    # categories: archive-categories
+    category: archive-categories
     tag: archive-tags
 
 # gems

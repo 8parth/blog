@@ -1,0 +1,9 @@
+---
+layout: default
+---
+<h3>Aricles with category '{{page.title}}':</h3>
+<div class="posts related">
+  {% for post in page.posts %}
+    {% include post_for_index.html %}
+  {% endfor %}
+</div>
