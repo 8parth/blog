@@ -29,6 +29,23 @@ author:
   stackoverflow    : "4933185/parth-modi"
   twitter          : "ParthModi08"
 
+# jekyll-seo-tag
+twitter:
+  username: ParthModi08
+social:
+  name: Parth Modi
+  links:
+    - https://twitter.com/ParthModi08
+    - https://www.facebook.com/parth.modi.359
+    - https://www.linkedin.com/in/parthrmodi/
+    - https://plus.google.com/115885247380801217391
+    - https://github.com/8parth
+webmaster_verifications:
+  google: "UA-77740680-2"
+  bing: "401CF93354E92FF91A4131D01853C962"
+  # alexa:
+  # yandex:
+
 feed:
   path: atom.xml
 
@@ -47,6 +64,7 @@ gems:
   - jekyll-feed
   - jekyll-archives
   - jekyll-sitemap
+  - jekyll-seo-tag
 
 
 # Custom vars
