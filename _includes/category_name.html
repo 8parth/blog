@@ -1,0 +1,7 @@
+{% if post.categories.size > 0 %}
+|
+{% for category in post.categories %}
+  <a href="{{site.baseurl}}/category/{{ category }}">{{ category }}</a>
+  {% unless forloop.last %},{% endunless %}
+{% endfor %}
+{% endif %}

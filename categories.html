@@ -16,7 +16,7 @@ permalink: /categories/
           {{ post.title }}
         </a>
         <span class="entry-date">
-          <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%B %d, %Y" }}
+          <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: site.date_format }}
           </time>
         </span>
       </li>

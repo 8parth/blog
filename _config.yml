@@ -11,6 +11,7 @@ url:                 "http://parthrmodi.com"
 baseurl:             "/blog"
 paginate:            5
 excerpt_separator:   <!--more-->
+date_format:         "%B %d, %Y"
 
 # About/contact
 author:

@@ -5,6 +5,10 @@
     </a>
   </h1>
 
-  <span class="post-date">{{ post.date | date_to_string }} | <a href="{{site.baseurl}}/category/{{ post.categories | first }}">{{ post.categories | first }}</a></span>
+  <span class="post-date">{{ post.date | date: site.date_format }} |
+    {% include read_time.html %}
+    {% include category_name.html %}
+  </span>
+
   {{ post.excerpt }}
 </div>
