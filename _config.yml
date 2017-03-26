@@ -32,10 +32,21 @@ author:
 feed:
   path: atom.xml
 
+jekyll-archives:
+  enabled:
+    # - day
+    # - categories
+    - tags
+  layouts:
+    # categories: archive-categories
+    tag: archive-tags
+
 # gems
 gems:
   - jekyll-paginate
   - jekyll-feed
+  - jekyll-archives
+  - jekyll-sitemap
 
 
 # Custom vars

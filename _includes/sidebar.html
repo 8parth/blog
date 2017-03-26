@@ -11,7 +11,6 @@
   </div>
 
   <div class="sidebar-item">
-    <p>{{ site.author.avatar }}</p>
     <p>{{ site.description }}</p>
   </div>
 
@@ -27,8 +26,16 @@
         {% endif %}
       {% endif %}
     {% endfor %}
-    <span class="sidebar-nav-item">Currently v{{ site.version }}</span>
+    <!-- <span class="sidebar-nav-item">Currently v{{ site.version }}</span> -->
   </nav>
+
+  <div class="sidebar-item">
+    <p>
+      <a href="{{ site.baseurl }}/atom.xml">
+        Atom Feed
+      </a>
+    </p>
+  </div>
 
   <div class="sidebar-item">
     <p>
