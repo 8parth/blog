@@ -52,12 +52,22 @@ feed:
 
 jekyll-archives:
   enabled:
-    # - day
     - categories
     - tags
   layouts:
     category: archive-categories
     tag: archive-tags
+
+comments:
+  provider: "disqus"
+  disqus:
+    shortname: "parthrmodi-com"
+
+defaults:
+    values:
+      comments: true
+      share: true
+related: true
 
 # gems
 gems:
@@ -66,7 +76,3 @@ gems:
   - jekyll-archives
   - jekyll-sitemap
   - jekyll-seo-tag
-
-
-# Custom vars
-version:             1.0.0
