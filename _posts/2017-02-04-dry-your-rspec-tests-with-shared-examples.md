@@ -1,24 +1,25 @@
 ---
+layout: post
 title: Dry your RSpec Tests with Shared Examples
 tags: [ruby, rails, rspec, tdd, web development] 
 ---
 
-Recently, after heavy refactoring in a project I had to spent good amount of time in writing specs. After writing almost similar test cases for some APIs, I thought of finding some solution to get rid of duplication in test cases. After reading articles on best practices and drying up tests, I came to know about shared examples and shared contexts. In my case, I ended up using shared examples and here is what I learned so far. 
+Recently, after heavy refactoring in a project I had to spent good amount of time in writing specs. After writing almost similar test cases for some APIs, I thought of finding some solution to get rid of duplication in test cases. After reading articles on best practices and drying up tests, I came to know about shared examples and shared contexts. In my case, I ended up using shared examples and here is what I learned so far.
 
-When you have multiple specs that describes similar behavior, it might be better to extract redundant examples in `shared examples` and use them in multiple specs. 
+When you have multiple specs that describes similar behavior, it might be better to extract redundant examples in `shared examples` and use them in multiple specs.
 
 <!--more-->
 
 Suppose you have two models *User* and *Post*, and a user can have many posts. One should be able to view list of users and posts. Creating index action in users and posts controller will serve the purpose.
 
-First write specs for index action of users controller which has responsibility of fetching users and rendering them with proper layout, and then write enough code to make tests pass. 
-  
+First write specs for index action of users controller which has responsibility of fetching users and rendering them with proper layout, and then write enough code to make tests pass.
+
 {% highlight ruby %}
 # users_controller_spec.rb
 describe "GET #index" do
-  before do 
+  before do
     5.times do
-      FactoryGirl.create(:user) 
+      FactoryGirl.create(:user)
     end
     get :index
   end
@@ -37,13 +38,13 @@ class UsersController < ApplicationController
 end
 {% endhighlight %}
 
-Typically index action of any controller fetches and aggregates data from few resources if required, and adds pagination, searching, sorting, filtering or scoping. Finally, all these data is presented to views via html, or JSON or XML in apis. To simplify example, index actions of controllers will just fetch data and show them via views. 
+Typically index action of any controller fetches and aggregates data from few resources if required, and adds pagination, searching, sorting, filtering or scoping. Finally, all these data is presented to views via html, or JSON or XML in apis. To simplify example, index actions of controllers will just fetch data and show them via views.
 
 Same goes for index action of posts controller:
 {% highlight ruby %}
 # posts_controller_spec.rb
-describe "GET #index" do 
-  before do 
+describe "GET #index" do
+  before do
     5.times do
       FactoryGirl.create(:post)
     end
@@ -64,25 +65,25 @@ class PostsController < ApplicationController
 end
 
 {% endhighlight %}
-Rspec tests written for both users and posts controller are very similar. In both controllers, 
- 
+Rspec tests written for both users and posts controller are very similar. In both controllers,
+
  - Response code -- should be 'ok'
  - Both index action should render proper partial or view - in our case `index`
- - The data to be rendered, such as posts or users 
+ - The data to be rendered, such as posts or users
 
-Let's DRY specs of index action by using shared examples. 
+Let's DRY specs of index action by using shared examples.
 
 ### Where to place
 
-I like to place shared examples defined inside _specs/support/shared_examples_ directory so that all shared example related files are loaded automatically. 
+I like to place shared examples defined inside _specs/support/shared_examples_ directory so that all shared example related files are loaded automatically.
 
 To read about other commonly used conventions to put shared examples from here: [shared examples documentation](https://www.relishapp.com/rspec/rspec-core/docs/example-groups/shared-examples)
 
-### How to define 
-Index action should respond with 200 success code (ok) and render index template. 
+### How to define
+Index action should respond with 200 success code (ok) and render index template.
 {% highlight ruby %}
-# specs/support/shared_examples/index_examples.rb 
-RSpec.shared_examples "index examples" do 
+# specs/support/shared_examples/index_examples.rb
+RSpec.shared_examples "index examples" do
   it {	expect(subject).to respond_with(:ok) }
   it {	expect(subject).to render_template(:index) }
 end
@@ -91,14 +92,14 @@ Apart from it blocks, before and after hooks, let blocks, context and describe b
 
 ### How to use
 
-Adding `include_examples "index examples"` to users and posts controller specs includes "index examples" to our tests. 
+Adding `include_examples "index examples"` to users and posts controller specs includes "index examples" to our tests.
 
 {% highlight ruby %}
 # users_controller_spec.rb
 describe "GET #index" do
-  before do 
+  before do
     5.times do
-      FactoryGirl.create(:user) 
+      FactoryGirl.create(:user)
     end
     get :index
   end
@@ -108,17 +109,17 @@ end
 
 # similarly, in posts_controller_spec.rb
 describe "GET #index" do
-  before do 
+  before do
     5.times do
-      FactoryGirl.create(:post) 
+      FactoryGirl.create(:post)
     end
     get :index
   end
   include_examples "index examples"
   it {  expect(assigns(:posts)).to match(Post.all) }
 end
-{% endhighlight %} 
-You can also use `it_behaves_like` or `it_should_behaves_like` instead of include_examples in this case. `it_behaves_like` and `it_should_behaves_like` are actually aliases and works in same manner, so they can be used interchangeably. However, `include_examples` and `it_behaves_like` are different. 
+{% endhighlight %}
+You can also use `it_behaves_like` or `it_should_behaves_like` instead of include_examples in this case. `it_behaves_like` and `it_should_behaves_like` are actually aliases and works in same manner, so they can be used interchangeably. However, `include_examples` and `it_behaves_like` are different.
 
 As stated in documentation,
 
@@ -139,12 +140,12 @@ Look at following line in users controller specs,
 `it {  expect(assigns(:users)).to match(User.all) }` and  `it {  expect(assigns(:posts)).to match(Post.all) }`
 from posts controller.
 
-Now, controller specs can be refactored further by passing parameters to shared example as below: 
+Now, controller specs can be refactored further by passing parameters to shared example as below:
 {% highlight ruby %}
 # specs/support/shared_examples/index_examples.rb
 
-# here assigned_resource and resource class are parameters passed to index examples block 
-RSpec.shared_examples "index examples" do |assigned_resource, resource_class| 
+# here assigned_resource and resource class are parameters passed to index examples block
+RSpec.shared_examples "index examples" do |assigned_resource, resource_class|
   it {	expect(subject).to respond_with(:ok) }
   it {	expect(subject).to render_template(:index) }
   it {  expect(assigns(assigned_resource)).to match(resource_class.all)   }
@@ -155,7 +156,7 @@ Now, make following changes in users and posts controller specs.
 {% highlight ruby %}
 # users_controller_spec.rb
 describe "GET #index" do
-  before do 
+  before do
     ...
   end
   include_examples "index examples", :users, User.all
@@ -163,17 +164,16 @@ end
 
 # posts_controller_spec.rb
 describe "GET #index" do
-  before do 
+  before do
     ...
   end
   include_examples "index examples", :posts, Post.all
 end
-{% endhighlight %} 
-Now controller specs look clean, less redundant and more importantly, DRY. Furthermore, "index examples" can serve as basic structure for designing index action of other controllers. 
+{% endhighlight %}
+Now controller specs look clean, less redundant and more importantly, DRY. Furthermore, "index examples" can serve as basic structure for designing index action of other controllers.
 
 ### Conclusion
-  
-By moving common examples into separate file we can eliminate duplication and more importantly, we can improve consistency of our controller actions throughout the application. This is very useful in case of designing APIs, as we can use existing structure of RSpec tests to design tests and create APIs that adhere to common response structure. Mostly, I work with APIs and use shared examples to provide me common structure to design similar APIs. 
+
+By moving common examples into separate file we can eliminate duplication and more importantly, we can improve consistency of our controller actions throughout the application. This is very useful in case of designing APIs, as we can use existing structure of RSpec tests to design tests and create APIs that adhere to common response structure. Mostly, I work with APIs and use shared examples to provide me common structure to design similar APIs.
 
 Feel free to share how you DRY up your specs and	use shared examples.
-
