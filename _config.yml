@@ -1,254 +1,78 @@
-# Welcome to Jekyll!
+# Permalinks
 #
-# This config file is meant for settings that affect your entire site, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# `jekyll serve`. If you change this file, please restart the server process.
+# Use of `relative_permalinks` ensures post links from the index work properly.
+permalink:           pretty
 
-# Site Settings
-locale                   : "en"
-title                    : "Parth Modi"
-title_separator          : "-"
-name                     : "Parth Modi"
-description              : ""
-url                      : "http://parthrmodi.com"
-baseurl                  : "/blog"
-repository               : "8parth/blog"
-teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
-breadcrumbs              : true
-words_per_minute         : 200
-comments:
-  provider               : "disqus"
-  disqus:
-    shortname            : "parthrmodi-com"
-  discourse:
-    server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
-  facebook:
-    # https://developers.facebook.com/docs/plugins/comments
-    appid                :
-    num_posts            : # 5 (default)
-    colorscheme          : # "light" (default), "dark"
-staticman:
-  allowedFields          : ['name', 'email', 'url', 'message']
-  branch                 : "master"
-  commitMessage          : "New comment."
-  filename               : comment-{@timestamp}
-  format                 : "yml"
-  moderation             : false
-  path                   : "docs/_data/comments/{options.slug}" # "/_data/comments/{options.slug}" (default)
-  requiredFields         : ['name', 'email', 'message']
-  transforms:
-    email                : "md5"
-  generatedFields:
-    date:
-      type               : "date"
-      options:
-        format           : "iso8601" # "iso8601" (default), "timestamp-seconds", "timestamp-milliseconds"
-atom_feed:
-  path                   :  # blank (default) uses feed.xml
+# Setup
+title:               Parth Modi
+tagline:             'Software Engineer'
+description:         'Loves to develop web with Ruby on Rails. Shares his journey of learning at his blog.'
+url:                 "http://parthrmodi.com"
+baseurl:             "/blog"
+paginate:            5
+excerpt_separator:   <!--more-->
+date_format:         "%B %d, %Y"
 
-# SEO Related
-google_site_verification : "UA-77740680-2"
-bing_site_verification   : "401CF93354E92FF91A4131D01853C962"
-alexa_site_verification  :
-yandex_site_verification :
-
-# Social Sharing
-twitter:
-  username               : "ParthModi08"
-facebook:
-  username               : "parth.modi.359"
-  app_id                 :
-  publisher              :
-og_image                 : # Open Graph/Twitter default site image
-# For specifying social profiles
-# - https://developers.google.com/structured-data/customize/social-profiles
-social:
-  type                   : # Person or Organization (defaults to Person)
-  name                   : # If the user or organization name differs from the site's name
-  links: # An array of links to social media profiles
-
-# Analytics
-analytics:
-  provider               : "google-universal" # false (default), "google", "google-universal", "custom"
-  google:
-    tracking_id          : "UA-77740680-2"
-
-
-# Site Author
+# About/contact
 author:
-  name             : "Parth Modi"
-  avatar           : "/assets/images/bio-photo.jpg"
+  name:              Parth Modi
+  url:               https://twitter.com/8parth
+  email:             "parthmodi54@yahoo.com"
+  avatar           : "public/assets/bio-photo.jpg"
   bio              : "Software Engieer - Ruby on Rails Developer."
   location         : "Ahmedabad, India"
   email            : "parthmodi54@yahoo.com"
-  uri              : 
-  bitbucket        :
   codepen          : #"parthmodi"
-  dribbble         :
-  flickr           :
   facebook         : "parth.modi.359"
-  foursquare       :
   github           : "8parth"
   google_plus      : "115885247380801217391"
-  keybase          :
-  instagram        :
-  lastfm           :
   linkedin         : "parthrmodi"
-  pinterest        :
-  soundcloud       :
   stackoverflow    : "4933185/parth-modi"
-  steam            :
-  tumblr           :
   twitter          : "ParthModi08"
-  vine             :
-  weibo            :
-  xing             :
-  youtube          : # "https://youtube.com/c/MichaelRoseDesign"
 
+# jekyll-seo-tag
+twitter:
+  username: ParthModi08
+social:
+  name: Parth Modi
+  links:
+    - https://twitter.com/ParthModi08
+    - https://www.facebook.com/parth.modi.359
+    - https://www.linkedin.com/in/parthrmodi/
+    - https://plus.google.com/115885247380801217391
+    - https://github.com/8parth
+webmaster_verifications:
+  google: "UA-77740680-2"
+  bing: "401CF93354E92FF91A4131D01853C962"
+  # alexa:
+  # yandex:
 
-# Reading Files
-include:
-  - .htaccess
-  - _pages
-exclude:
-  - "*.sublime-project"
-  - "*.sublime-workspace"
-  - vendor
-  - .asset-cache
-  - .bundle
-  - .jekyll-assets-cache
-  - .sass-cache
-  - assets/js/plugins
-  - assets/js/_main.js
-  - assets/js/vendor
-  - Capfile
-  - CHANGELOG
-  - config
-  - Gemfile
-  - Gruntfile.js
-  - gulpfile.js
-  - LICENSE
-  - log
-  - node_modules
-  - package.json
-  - Rakefile
-  - README
-  - tmp
-  - /docs # ignore Minimal Mistakes /docs
-  - /test # ignore Minimal Mistakes /test
-keep_files:
-  - .git
-  - .svn
-encoding: "utf-8"
-markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+feed:
+  path: atom.xml
 
-
-# Conversion
-markdown: kramdown
-highlighter: rouge
-lsi: false
-excerpt_separator: <!--more-->
-incremental: false
-
-
-# Markdown Processing
-kramdown:
-  input: GFM
-  hard_wrap: false
-  auto_ids: true
-  footnote_nr: 1
-  entity_output: as_char
-  toc_levels: 1..6
-  smart_quotes: lsquo,rsquo,ldquo,rdquo
-  enable_coderay: false
-
-
-# Sass/SCSS
-sass:
-  sass_dir: _sass
-  style: compressed # http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
-
-
-# Outputting
-permalink: /:categories/:title/
-paginate: 5 # amount of posts to show
-paginate_path: /page:num/
-timezone: # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-
-
-# Plugins
-gems:
-  - jekyll-compose
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-gist
-  - jekyll-twitter-plugin
-  - jekyll-feed
-  - jekyll-archives
-  - jemoji
-
-# mimic GitHub Pages with --safe
-whitelist:
-  - jekyll-compose
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-gist
-  - jekyll-feed
-  - jekyll-archives
-  - jemoji
-
-
-# Archives
-#  Type
-#  - GitHub Pages compatible archive pages built with Liquid ~> type: liquid (default)
-#  - Jekyll Archives plugin archive pages ~> type: jekyll-archives
-#  Path (examples)
-#  - Archive page should exist at path when using Liquid method or you can
-#    expect broken links (especially with breadcrumbs enabled)
-#  - <base_path>/tags/my-awesome-tag/index.html ~> path: /tags/
-#  - <base_path/categories/my-awesome-category/index.html ~> path: /categories/
-#  - <base_path/my-awesome-category/index.html ~> path: /
-category_archive:
-  type: liquid
-  path: /categories/
-tag_archive:
-  type: liquid
-  path: /tags/
-# https://github.com/jekyll/jekyll-archives
 jekyll-archives:
   enabled:
     - categories
     - tags
-    - year
   layouts:
-    category: archive-taxonomy
-    tag: archive-taxonomy
-    year: archive-taxonomy
-  permalinks:
-    category: /categories/:name/
-    tag: /tags/:name/
-    year: /archives/year/:year/
+    category: archive-categories
+    tag: archive-tags
 
+comments:
+  provider: "disqus"
+  disqus:
+    shortname: "parthrmodi-com"
 
-# HTML Compression
-# - http://jch.penibelst.de/
-compress_html:
-  clippings: all
-  ignore:
-    envs: development
-
-
-# Defaults
 defaults:
-  # _posts
-  - scope:
-      path: ""
-      type: posts
     values:
-      layout: single
-      author_profile: true
-      read_time: true
       comments: true
       share: true
-      related: true
+related: true
+
+# gems
+gems:
+  - jekyll-paginate
+  - jekyll-feed
+  - jekyll-archives
+  - jekyll-sitemap
+  - jekyll-seo-tag

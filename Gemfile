@@ -2,7 +2,7 @@ source "https://rubygems.org"
 ruby "2.3.3"
 
 gem "github-pages", group: :jekyll_plugins
-gem "minimal-mistakes-jekyll"
+# gem "jekyll"
 
 group :jekyll_plugins do
   gem "jekyll-compose"
@@ -13,4 +13,5 @@ group :jekyll_plugins do
   gem "jemoji"
   gem "jekyll-twitter-plugin"
   gem "jekyll-archives"
+  gem "jekyll-seo-tag"
 end

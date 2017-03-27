@@ -1,0 +1,16 @@
+---
+layout: page
+title: Tags
+permalink: /tag/
+---
+<div class="tagcloud">
+  <ul>
+    {% for tag in site.tags %}
+    <li>
+      <a href="{{ tag | first }}">
+        {{ tag | first }}
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
