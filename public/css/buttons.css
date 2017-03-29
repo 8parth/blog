@@ -1,5 +1,5 @@
 /* Buttons ========================================================================== */
-.btn { display: inline-block; margin-bottom: 17px; padding: 8px 20px; font-size: 0.875em; font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: 700; background-color: #42b983; color: #fff; border-width: 2px !important; border-style: solid !important; border-color: #42b983; text-decoration: none !important; border-radius: 5px; }
+.btn { display: inline-block; margin-bottom: 20px; padding: 8px 17px; font-size: 0.875em; font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: 700; background-color: #42b983; color: #fff; border-width: 2px !important; border-style: solid !important; border-color: #42b983; text-decoration: none !important; border-radius: 5px; }
 .btn:visited { color: #fff; border-color: #42b983; }
 .btn:hover { background-color: #fff; color: #42b983; border-color: #42b983; }
 
