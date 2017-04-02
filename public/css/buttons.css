@@ -1,0 +1,47 @@
+/* Buttons ========================================================================== */
+.btn { display: inline-block; margin-bottom: 20px; padding: 8px 17px; font-size: 0.875em; font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: 700; background-color: #42b983; color: #fff; border-width: 2px !important; border-style: solid !important; border-color: #42b983; text-decoration: none !important; border-radius: 5px; }
+.btn:visited { color: #fff; border-color: #42b983; }
+.btn:hover { background-color: #fff; color: #42b983; border-color: #42b983; }
+
+.btn-success { background-color: #65e892; color: #fff; border-color: #65e892; }
+.btn-success:visited { color: #fff; border-color: #65e892; }
+.btn-success:hover { background-color: #fff; color: #65e892; border-color: #65e892; }
+
+.btn-warning { background-color: #F5A623; color: #fff; border-color: #F5A623; }
+.btn-warning:visited { color: #fff; border-color: #F5A623; }
+.btn-warning:hover { background-color: #fff; color: #F5A623; border-color: #F5A623; }
+
+.btn-danger { background-color: #f83e4b; color: #fff; border-color: #f83e4b; }
+.btn-danger:visited { color: #fff; border-color: #f83e4b; }
+.btn-danger:hover { background-color: #fff; color: #f83e4b; border-color: #f83e4b; }
+
+.btn-info { background-color: #09ABF6; color: #fff; border-color: #09ABF6; }
+.btn-info:visited { border-color: #09ABF6; color: #fff; }
+.btn-info:hover { background-color: #fff; color: #09ABF6; border-color: #09ABF6; }
+
+
+.share-buttons { padding-top: 1em; border-top: 1px solid #ddd; }
+.share-buttons ul { margin: 0; padding: 0; list-style: none; }
+.share-buttons ul li { display: inline-block; margin-right: 0.5em; }
+.share-buttons ul li span { display: none; }
+@media only screen and (min-width: 600px) { .share-buttons ul li span { display: inline; margin: 0.5em; } }
+
+.twitter { background-color: #77bcf1; color: #fff; border-color: #77bcf1; }
+.twitter:visited { color: #fff; border-color: #77bcf1; }
+.twitter:hover { background-color: #fff; color: #77bcf1; border-color: #77bcf1; }
+
+.facebook { background-color: #627aac; color: #fff; border-color: #627aac; }
+.facebook:visited { color: #fff; border-color: #627aac; }
+.facebook:hover { background-color: #fff; color: #627aac; border-color: #627aac; }
+
+.google-plus { background-color: #e36f60; color: #fff; border-color: #e36f60; }
+.google-plus:visited { color: #fff; border-color: #e36f60; }
+.google-plus:hover { background-color: #fff; color: #e36f60; border-color: #e36f60; }
+
+.hacker-news { background-color: #f60; color: #fff; border-color: #f60; }
+.hacker-news:visited { color: #fff; border-color: #f60; }
+.hacker-news:hover { background-color: #fff; color: #f60; border-color: #f60; }
+
+.reddit { background-color: #5f99cf; color: #fff; border-color: #5f99cf; }
+.reddit:visited { color: #fff; border-color: #5f99cf; }
+.reddit:hover { background-color: #fff; color: #5f99cf; border-color: #5f99cf; }
