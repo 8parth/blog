@@ -1,0 +1,23 @@
+---
+layout: default
+title: Presentations
+---
+<div class="posts">
+  {% for post in site.categories.presentation %}
+    <!-- <li>
+      <span class="post-meta">{{ post.date  | date: "%b %-d, %Y" }}
+      <h2>
+        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+      </h2>
+    </li> -->
+    <li>
+      <a href="{{ site.baseurl }}{{ post.url }}">
+        {{ post.title }}
+      </a>
+      <span class="entry-date">
+        <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: site.date_format }}
+        </time>
+      </span>
+    </li>
+  {% endfor %}
+</div>
