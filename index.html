@@ -5,9 +5,7 @@ title: Home
 
 <div class="posts">
   {% for post in paginator.posts %}
-    {% unless post.categories contains "presentation"  %}
-      {% include post_for_index.html %}
-    {% endunless %}
+    {% include post_for_index.html %}
   {% endfor %}
 </div>
 
