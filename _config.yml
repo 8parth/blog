@@ -46,7 +46,7 @@ webmaster_verifications:
   bing: "401CF93354E92FF91A4131D01853C962"
   # alexa:
   # yandex:
-  
+
 analytics:
   google:
     tracking_id: "UA-77740680-2"
@@ -80,3 +80,9 @@ gems:
   - jekyll-archives
   - jekyll-sitemap
   - jekyll-seo-tag
+
+# collections
+collections:
+  presentations:
+    output: true
+    permalink: /presentations/:name
