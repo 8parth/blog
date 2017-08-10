@@ -80,6 +80,7 @@ gems:
   - jekyll-archives
   - jekyll-sitemap
   - jekyll-seo-tag
+  - jemoji
 
 # collections
 collections:
