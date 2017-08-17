@@ -74,7 +74,7 @@ defaults:
 related: true
 
 # gems
-gems:
+plugins:
   - jekyll-paginate
   - jekyll-feed
   - jekyll-archives
