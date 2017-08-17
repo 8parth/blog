@@ -13,5 +13,5 @@ group :jekyll_plugins do
   gem "jemoji"
   gem "jekyll-twitter-plugin"
   gem "jekyll-archives"
-  gem "jekyll-seo-tag"
+  gem "jekyll-seo-tag", git: "https://github.com/jekyll/jekyll-seo-tag.git", branch: "master"
 end
