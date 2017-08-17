@@ -3,7 +3,6 @@ layout: post
 title: Dry your RSpec Tests with Shared Examples
 tags: [ruby, rails, rspec, tdd, web development]
 permalink: :title
-canonical_url: 'https://medium.freecodecamp.com/how-to-dry-out-your-rspec-tests-using-shared-examples-d5cc5d33fd76'
 ---
 
 Recently, after heavy refactoring in a project I had to spent good amount of time in writing specs. After writing almost similar test cases for some APIs, I thought of finding some solution to get rid of duplication in test cases. After reading articles on best practices and drying up tests, I came to know about shared examples and shared contexts. In my case, I ended up using shared examples and here is what I learned so far.
