@@ -3,10 +3,15 @@ layout: post
 title: Dry your RSpec Tests with Shared Examples
 tags: [ruby, rails, rspec, tdd, web development]
 permalink: :title
+teaser: '/public/assets/dry-specs.jpeg'
 canonical_url: 'https://medium.freecodecamp.com/how-to-dry-out-your-rspec-tests-using-shared-examples-d5cc5d33fd76'
 ---
 
-Recently, after heavy refactoring in a project I had to spent good amount of time in writing specs. After writing almost similar test cases for some APIs, I thought of finding some solution to get rid of duplication in test cases. After reading articles on best practices and drying up tests, I came to know about shared examples and shared contexts. In my case, I ended up using shared examples and here is what I learned so far.
+When I refactored a project a few weeks ago, I spent most of my time writing specs. After writing several similar test cases for some APIs, I started to wonder whether I might be able to get rid of a lot of this duplication.
+
+So I threw myself into reading up on the best practices for DRYing up tests (Don’t Repeat Yourself). And that’s how I came to know of `shared examples` and `shared contexts`.
+
+In my case, I ended up using shared examples. And here’s what I’ve learned so far from applying these.
 
 When you have multiple specs that describes similar behavior, it might be better to extract redundant examples in `shared examples` and use them in multiple specs.
 
@@ -178,4 +183,4 @@ Now controller specs look clean, less redundant and more importantly, DRY. Furth
 
 By moving common examples into separate file we can eliminate duplication and more importantly, we can improve consistency of our controller actions throughout the application. This is very useful in case of designing APIs, as we can use existing structure of RSpec tests to design tests and create APIs that adhere to common response structure. Mostly, I work with APIs and use shared examples to provide me common structure to design similar APIs.
 
-Feel free to share how you DRY up your specs and	use shared examples.
+Feel free to share how you DRY up your specs and use shared examples.
