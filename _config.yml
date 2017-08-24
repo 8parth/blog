@@ -7,7 +7,7 @@ permalink:           pretty
 title:               Parth Modi
 tagline:             'Software Engineer'
 description:         'Loves to develop web with Ruby on Rails. Shares his journey of learning at his blog.'
-url:                 "http://parthrmodi.com"
+url:                 "https://parthrmodi.com"
 baseurl:             "/blog"
 paginate:            5
 excerpt_separator:   <!--more-->
@@ -78,9 +78,9 @@ plugins:
   - jekyll-paginate
   - jekyll-feed
   - jekyll-archives
-  - jekyll-sitemap
   - jekyll-seo-tag
   - jemoji
+  - jekyll-sitemap
 
 # collections
 collections:
