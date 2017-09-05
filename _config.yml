@@ -13,6 +13,8 @@ paginate:            5
 excerpt_separator:   <!--more-->
 date_format:         "%B %d, %Y"
 
+exclude: [vendor]
+
 # About/contact
 author:
   name:              Parth Modi
@@ -53,6 +55,7 @@ analytics:
 
 feed:
   path: atom.xml
+  url: "https://parthrmodi.com/blog/"
 
 jekyll-archives:
   enabled:
