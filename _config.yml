@@ -5,8 +5,8 @@ permalink:           pretty
 
 # Setup
 title:               Parth Modi
-tagline:             'Software Engineer'
-description:         'Loves to develop web with Ruby on Rails. Shares his journey of learning at his blog.'
+tagline:             'Ruby and Rails | Python | ReactJS | Cybersecurity'
+description:         'Specializes in building various kind of applications with strong focus on backend technologies such as Ruby on Rails, Python.'
 url:                 "https://parthrmodi.com"
 baseurl:             "/blog"
 paginate:            5
@@ -21,7 +21,7 @@ author:
   url:               https://twitter.com/8parth
   email:             "parthmodi54@yahoo.com"
   avatar           : "public/assets/bio-photo.jpg"
-  bio              : "Software Engieer - Ruby on Rails Developer."
+  bio              : "Technical Lead | Ruby and Rails | Python | ReactJS | Cybersecurity"
   location         : "Ahmedabad, India"
   email            : "parthmodi54@yahoo.com"
   codepen          : #"parthmodi"
